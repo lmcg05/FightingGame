@@ -18,6 +18,7 @@ public class VisibilityManager {
         ui.mainTextPanel.setVisible(false);
         ui.choiceButtonPanel.setVisible(false);
         ui.playerPanel.setVisible(false);
+        ui.ChoiceButtonPanel2.setVisible(false);
     }
     public void showGameScreen() {
         //show title screen
@@ -30,6 +31,7 @@ public class VisibilityManager {
         ui.mainTextPanel.setVisible(true);
         ui.choiceButtonPanel.setVisible(true);
         ui.playerPanel.setVisible(true);
+        ui.ChoiceButtonPanel2.setVisible(true);
 
 
 

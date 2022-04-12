@@ -53,14 +53,24 @@ public class Story {
                 sound.pikachu();
                 sound.playPikachu();
                 sound.buttonSound();
+                sound.stopMidPage();
+                sound.battle();
+                sound.playbat();
+
                 setDirectionPika();
                 break;
             case "directionEjay":
+                sound.stopMidPage();
                 sound.buttonSound();
+                sound.battle();
+                sound.playbat();
                 setDirectionEjay();
                 break;
             case "directionMew":
+                sound.stopMidPage();
                 sound.buttonSound();
+                sound.battle();
+                sound.playbat();
                 setDirectionMew();
                 break;
 
@@ -71,10 +81,14 @@ public class Story {
                 forwardPika();
                 break;
             case "leftPika":
+                sound.totodile();
+                sound.playToto();
                 sound.buttonSound();
                 pikachuLeft();
                 break;
             case "rightPika":
+                sound.mewtwo();
+                sound.playmew();
 
                 sound.buttonSound();
                 pikachuRight();
@@ -125,9 +139,13 @@ public class Story {
                 break;
             case "gyradosAttackForward":
                 sound.buttonSound();
+                sound.gyradosAttack();
+                sound.playgy();
                 gyradosAttackForward();
                 break;
             case "totoAttackPika":
+                sound.totoAttack();
+                sound.playtt();
                 sound.buttonSound();
                 totodileAttackLeft();
                 break;
@@ -144,6 +162,8 @@ public class Story {
                 pikachuAttackRight();
                 break;
             case "mewtwoAttackPika":
+                sound.mewAttack();
+                sound.playma();
                 sound.buttonSound();
                 mewtwoAttackRight();
                 break;
@@ -178,11 +198,15 @@ public class Story {
                 ejayAttackForward();
                 break;
             case "gyradosejayAttackForward":
+                sound.gyradosAttack();
+                sound.playgy();
                 sound.buttonSound();
                 gyradosEjayAttackForward();
                 break;
 
             case "leftEjay":
+                sound.totodile();
+                sound.playToto();
                 sound.buttonSound();
                 leftEjay();
             case "leftEjayFight":
@@ -201,11 +225,15 @@ public class Story {
                 ejayAttackLeft();
                 break;
             case "TotodileejayAttackLeft":
+                sound.totoAttack();
+                sound.playtt();
                 sound.buttonSound();
                 totodileEjayAttackLeft();
                 break;
             case "rightEjay":
                 sound.buttonSound();
+                sound.mewtwo();
+                sound.playmew();
                 rightEjay();
                 break;
             case "rightEjayFight":
@@ -225,6 +253,8 @@ public class Story {
                 ejayAttackRight();
                 break;
             case "mewtwoEjayAttackRight":
+                sound.mewAttack();
+                sound.playma();
                 sound.buttonSound();
                 mewtwoEjayAttackRight();
                 break;
@@ -254,6 +284,8 @@ public class Story {
                 mewAttackForward();
                 break;
             case "gyradosMewAttackForward":
+                sound.gyradosAttack();
+                sound.playgy();
                 sound.buttonSound();
                 gyradosMewAttackForward();
                 break;
@@ -270,9 +302,13 @@ public class Story {
                 mewtotoAttackLeft();
                 break;
             case "totoMewAttackLeft":
+                sound.totoAttack();
+                sound.playtt();
                 sound.buttonSound();
                 totoMewAttackLeft();
             case "leftMew":
+                sound.totodile();
+                sound.playToto();
                 sound.buttonSound();
                 leftMew();
                 break;
@@ -283,6 +319,8 @@ public class Story {
 
 
             case "rightMew":
+                sound.mewtwo();
+                sound.playmew();
                 sound.buttonSound();
                 rightMew();
                 break;
@@ -303,6 +341,8 @@ public class Story {
                 mewMewtwoAttackRight();
                 break;
             case "mewtwoMewAttackRight":
+                sound.mewAttack();
+                sound.playma();
                 sound.buttonSound();
                 mewtwoMewAttackRight();
                 break;
@@ -314,21 +354,23 @@ public class Story {
 
 
             case "win":
-                sound.stopMidPage();
+                sound.stopbat();
                 sound.winSound();
                 sound.playWin();
                 win();
                 if (answer.equals(0)) {
 
 
-                    tryAgain();
+                    sound.yes();
+                    sound.playYes();
                 } else if (answer.equals(1)) {
                     no();
                 }
                 break;
             case "lose":
-                sound.stopMidPage();
-                sound.loseSound();
+
+
+                sound.stopbat();
                 lose();
                 if (answer.equals(0)) {
                     tryAgain();
@@ -341,6 +383,70 @@ public class Story {
             case "surrender":
                 surrender();
                 break;
+            case "potion1":
+                sound.recovery();
+                sound.playrec();
+                sound.buttonSound();
+                potion();
+                fightPikachuForward();
+                break;
+            case "potion2":
+                sound.recovery();
+                sound.playrec();
+                sound.buttonSound();
+                potion();
+                fightPikachuLeft();
+                break;
+            case "potion3":
+                sound.recovery();
+                sound.playrec();
+                sound.buttonSound();
+                potion();
+                fightPikachuRight();
+                break;
+            case "potion4":
+                sound.recovery();
+                sound.playrec();
+                sound.buttonSound();
+                potion();
+                fightEjayForward();
+                break;
+            case "potion5":
+                sound.recovery();
+                sound.playrec();
+                sound.buttonSound();
+                potion();
+                leftEjayFight();
+                break;
+            case "potion6":
+                sound.recovery();
+                sound.playrec();
+                sound.buttonSound();
+                potion();
+                rightEjayFight();
+                break;
+            case "potion7":
+                sound.recovery();
+                sound.playrec();
+                sound.buttonSound();
+                potion();
+                forwardMewFight();
+                break;
+            case "potion8":
+                sound.recovery();
+                sound.playrec();
+                sound.buttonSound();
+                potion();
+                leftMewFight();
+                break;
+            case "potion9":
+                sound.recovery();
+                sound.playrec();
+                sound.buttonSound();
+                potion();
+                rightMewFight();
+                break;
+
 
 
 
@@ -349,6 +455,7 @@ public class Story {
 
     }
     public void tryAgain() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+        sound.loseSound();
 
 
         pokemon.Hp = 100;
@@ -373,7 +480,9 @@ public class Story {
         sound.midPage();
         sound.playMidPage();
 
-        ui.mainTextArea.setText("Start your Adventure. Choose a Starter Pokemon");
+        ui.mainTextArea.setText("Welcome " + game.name + "!!! (not you again >.<)\n\n"+
+                "Enzo: Here, take one of these rare pokemon\n"
+                +"          Choose a Starter Pokemon");
         ui.choice1.setText("Pikachu");
         ui.choice2.setText("Ejay");
         ui.choice3.setText("Mew");
@@ -388,10 +497,10 @@ public class Story {
 
 
 
-        ui.mainTextArea.setText("Choose a Direction");
-        ui.choice1.setText("Forward");
-        ui.choice2.setText("Left");
-        ui.choice3.setText("Right");
+        ui.mainTextArea.setText("Where would you like to go:");
+        ui.choice1.setText("LittleRoot");
+        ui.choice2.setText("Petalburg");
+        ui.choice3.setText("Rustboro");
 
 //        game.position = "Direction"; //access the variable spring
 
@@ -426,11 +535,13 @@ public class Story {
         ui.mainTextArea.setText("You chose to fight. Choose an ability");
         ui.choice1.setText("Thunder");
         ui.choice2.setText("ThunderBolt");
-        ui.choice3.setText(("Tackle"));
+        ui.choice3.setText("Tackle");
+        ui.choice4.setText("Potion");
 
         game.position1 = "thunderForward";
         game.position3 = "thunderboltForward";
         game.position4 = "tackleForward";
+        game.position5 = "potion1";
 
     }
 
@@ -438,7 +549,7 @@ public class Story {
 
 
         if (game.position1.equals("thunderForward")) {
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(20);
             sound.thunder();
             sound.playThunder();
             ui.mainTextArea.setText("You attacked Gyrados with " + "thunder" + " gave " + playerDamage + " damage");
@@ -446,13 +557,13 @@ public class Story {
         } else if (game.position3.equals("thunderboltForward")) {
             sound.thunderbolt();
             sound.playThunderbolt();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(10);
             ui.mainTextArea.setText("You attacked Gyrados with " + "thunderbolt" + " gave " + playerDamage + " damage");
 
         } else if (game.position4.equals("tackleForward")) {
             sound.tackle();
             sound.playTackle();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(10);
             ui.mainTextArea.setText("You attacked Gyrados with " + "tackle" + " gave " + playerDamage + " damage");
         }
 
@@ -469,6 +580,7 @@ public class Story {
             game.position1 = "gyradosAttackForward";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion1";
         } else if (pokemon.Hp < 0) {
             game.position1 = "win";
             game.position3 = "";
@@ -481,7 +593,7 @@ public class Story {
     public void gyradosAttackForward() {
 
 
-        monsterDamage = new Random().nextInt(100);
+        monsterDamage = new Random().nextInt(25);
 
         ui.mainTextArea.setText("Gyrados Attack you and gave you " + monsterDamage + " damage");
 
@@ -497,6 +609,7 @@ public class Story {
             game.position1 = "fightPikachuForward";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion1";
         } else if (player.Hp < 0) {
             game.position1 = "lose";
             game.position3 = "";
@@ -526,10 +639,13 @@ public class Story {
         ui.choice1.setText("Thunder");
         ui.choice2.setText("ThunderBolt");
         ui.choice3.setText(("Tackle"));
+        ui.choice4.setText("Potion");
 
         game.position1 = "thunderLeft";
         game.position3 = "thunderboltLeft";
         game.position4 = "tackleLeft";
+        game.position5 = "potion2";
+
 
     }
     public void pikachuAttackLeft() throws UnsupportedAudioFileException, LineUnavailableException, IOException { //pikachu
@@ -538,19 +654,19 @@ public class Story {
         if (game.position1.equals("thunderLeft")) {
             sound.thunder();
             sound.playThunder();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(20);
             ui.mainTextArea.setText("You attacked Totodile with " + "thunder" + " gave " + playerDamage + " damage");
 
         } else if (game.position3.equals("thunderboltLeft")) {
             sound.thunderbolt();
             sound.playThunderbolt();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(20);
             ui.mainTextArea.setText("You attacked Totodile with " + "thunderbolt" + " gave " + playerDamage + " damage");
 
         } else if (game.position4.equals("tackleLeft")) {
             sound.tackle();
             sound.playTackle();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(10);
             ui.mainTextArea.setText("You attacked Totodile with " + "tackle" + " gave " + playerDamage + " damage");
 
         }
@@ -568,6 +684,7 @@ public class Story {
             game.position1 = "totoAttackPika";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion2";
         } else if (pokemon.Hp < 0) {
             game.position1 = "win";
             game.position3 = "";
@@ -579,7 +696,7 @@ public class Story {
     public void totodileAttackLeft() {
 
 
-        monsterDamage = new Random().nextInt(100);
+        monsterDamage = new Random().nextInt(25);
 
         ui.mainTextArea.setText("Totodile Attack you and gave you " + monsterDamage + " damage");
 
@@ -595,6 +712,7 @@ public class Story {
             game.position1 = "fightPikachuLeft";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion2";
         } else if (player.Hp < 0) {
             game.position1 = "lose";
             game.position3 = "";
@@ -622,25 +740,33 @@ public class Story {
         ui.choice1.setText("Thunder");
         ui.choice2.setText("ThunderBolt");
         ui.choice3.setText(("Tackle"));
+        ui.choice4.setText("Potion");
 
         game.position1 = "thunderRight";
         game.position3 = "thunderboltRight";
         game.position4 = "tackleRight";
+        game.position5 = "potion3";
 
     }
-    public void pikachuAttackRight() { //pikachu
+    public void pikachuAttackRight() throws UnsupportedAudioFileException, LineUnavailableException, IOException { //pikachu
 
 
         if (game.position1.equals("thunderRight")) {
-            playerDamage = new Random().nextInt(100);
+            sound.thunder();
+            sound.playThunder();
+            playerDamage = new Random().nextInt(20);
             ui.mainTextArea.setText("You attacked Mewtwo with " + "thunder" + " gave " + playerDamage + " damage");
 
         } else if (game.position3.equals("thunderboltRight")) {
-            playerDamage = new Random().nextInt(100);
+            sound.thunderbolt();
+            sound.playThunderbolt();
+            playerDamage = new Random().nextInt(20);
             ui.mainTextArea.setText("You attacked Mewtwo with " + "thunderbolt" + " gave " + playerDamage + " damage");
 
         } else if (game.position4.equals("tackleRight")) {
-            playerDamage = new Random().nextInt(100);
+            sound.tackle();
+            sound.playTackle();
+            playerDamage = new Random().nextInt(10);
             ui.mainTextArea.setText("You attacked Mewtwo with " + "tackle" + " gave " + playerDamage + " damage");
 
         }
@@ -658,6 +784,7 @@ public class Story {
             game.position1 = "mewtwoAttackPika";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion3";
         } else if (pokemon.Hp < 0) {
             game.position1 = "win";
             game.position3 = "";
@@ -669,7 +796,7 @@ public class Story {
     public void mewtwoAttackRight() {
 
 
-        monsterDamage = new Random().nextInt(100);
+        monsterDamage = new Random().nextInt(25);
 
         ui.mainTextArea.setText("Mewtwo Attack you and gave you " + monsterDamage + " damage");
 
@@ -704,10 +831,11 @@ public class Story {
         sound.playEjay();
 
 
-        ui.mainTextArea.setText("Choose a Direction");
-        ui.choice1.setText("Forward");
-        ui.choice2.setText("Left");
-        ui.choice3.setText("Right");
+        ui.mainTextArea.setText("Where would you like to go:\n" + "your lost!!\n" +
+                "not the best pokemon choice so you better RUN!!!" );
+        ui.choice1.setText("LittleRoot");
+        ui.choice2.setText("Petalburg");
+        ui.choice3.setText("Rustboro");
 
 //        game.position = "Direction"; //access the variable spring
 
@@ -716,12 +844,13 @@ public class Story {
         game.position3 = "leftEjay";
         game.position4 = "rightEjay";
 
+
     }
     public void forwardEjay() {
         sound.stopEjay();
 
         ui.mainTextArea.setText("A Wild Gyrados Appeared\n" +
-                "What will you do...");
+                "What will you do...\n" );
         ui.choice1.setText("Fight");
         ui.choice2.setText("Run");
         ui.choice3.setText("Surrender");
@@ -737,14 +866,16 @@ public class Story {
 
     public void fightEjayForward() {
 
-        ui.mainTextArea.setText("You chose to fight. Choose an ability");
+        ui.mainTextArea.setText("You chose to fight. Choose an ability\n");
         ui.choice1.setText("Slap");
         ui.choice2.setText("Insult");
-        ui.choice3.setText(("Kick Balls"));
+        ui.choice3.setText("Kick Balls");
+        ui.choice4.setText("Potion");
 
         game.position1 = "slapForward";
         game.position3 = "insultForward";
         game.position4 = "kickBallsForward";
+        game.position5 = "potion4";
 
     }
     public void ejayAttackForward() throws UnsupportedAudioFileException, LineUnavailableException, IOException { //pikachu
@@ -753,18 +884,21 @@ public class Story {
         if (game.position4.equals("slapForward")) {
             sound.slapSound();
             sound.playSlap();
-            playerDamage = new Random().nextInt(100);
-            ui.mainTextArea.setText("You attacked Gyrados with " + "slap" + " gave " + playerDamage + " damage");
+            playerDamage = new Random().nextInt(10);
+            ui.mainTextArea.setText("You attacked Gyrados with " + "slap" + " gave " + playerDamage + " damage\n" +
+                    "told you, his weak");
         } else if (game.position4.equals("insultForward")) {
             sound.insultSound();
             sound.playInsult();
-            playerDamage = new Random().nextInt(100);
-            ui.mainTextArea.setText("You attacked Gyrados with " + "insult" + " gave " + playerDamage + " damage");
+            playerDamage = new Random().nextInt(20);
+            ui.mainTextArea.setText("You attacked Gyrados with " + "insult" + " gave " + playerDamage + " damage\n" +
+                    "told you, his weak");
         } else if (game.position4.equals("kickBallsForward")) {
             sound.kickBallsSound();
             sound.playKickballs();
-            playerDamage = new Random().nextInt(100);
-            ui.mainTextArea.setText("You attacked Gyrados with " + "kick balls" + " gave " + playerDamage + " damage");
+            playerDamage = new Random().nextInt(20);
+            ui.mainTextArea.setText("You attacked Gyrados with " + "kick balls" + " gave " + playerDamage + " damage\n" +
+                    "told you, his weak");
         }
 
 
@@ -781,6 +915,7 @@ public class Story {
             game.position1 = "gyradosejayAttackForward";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion4";
         } else if (pokemon.Hp < 0) {
             game.position1 = "win";
             game.position3 = "";
@@ -790,12 +925,10 @@ public class Story {
 
     }
     public void gyradosEjayAttackForward() {
-//        sound.stopThunder();
-//        sound.stopThunderbolt();
-//        sound.stopTackle();
 
 
-        monsterDamage = new Random().nextInt(100);
+
+        monsterDamage = new Random().nextInt(80);
 
         ui.mainTextArea.setText("Gyrados Attack you and gave you " + monsterDamage + " damage");
 
@@ -811,6 +944,7 @@ public class Story {
             game.position1 = "forwardEjayFight";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion4";
         } else if (player.Hp < 0) {
             game.position1 = "lose";
             game.position3 = "";
@@ -820,7 +954,7 @@ public class Story {
 
     }
     public void leftEjay(){
-        sound.stopEjay();
+
         ui.mainTextArea.setText("A Wild Totodile Appeared\n" +
                 "What will you do...");
         ui.choice1.setText("Fight");
@@ -839,10 +973,12 @@ public class Story {
         ui.choice1.setText("Slap");
         ui.choice2.setText("Insult");
         ui.choice3.setText(("Kick Balls"));
+        ui.choice4.setText("Potion");
 
         game.position1 = "slapLeft";
         game.position3 = "insultLeft";
         game.position4 = "kickBallsLeft";
+        game.position5 = "potion5";
 
     }
     public void ejayAttackLeft() throws UnsupportedAudioFileException, LineUnavailableException, IOException { //pikachu
@@ -851,18 +987,21 @@ public class Story {
         if (game.position4.equals("slapLeft")) {
             sound.slapSound();
             sound.playSlap();
-            playerDamage = new Random().nextInt(100);
-            ui.mainTextArea.setText("You attacked Totodile with " + "slap" + " gave " + playerDamage + " damage");
+            playerDamage = new Random().nextInt(10);
+            ui.mainTextArea.setText("You attacked Totodile with " + "slap" + " gave " + playerDamage + " damage\n" +
+                    "told you, his weak");
         } else if (game.position4.equals("insultLeft")) {
             sound.insultSound();
             sound.playInsult();
-            playerDamage = new Random().nextInt(100);
-            ui.mainTextArea.setText("You attacked Totodile with " + "insult" + " gave " + playerDamage + " damage");
+            playerDamage = new Random().nextInt(20);
+            ui.mainTextArea.setText("You attacked Totodile with " + "insult" + " gave " + playerDamage + " damage\n" +
+                    "told you, his weak");
         } else if (game.position4.equals("kickBallsLeft")) {
             sound.kickBallsSound();
             sound.playKickballs();
-            playerDamage = new Random().nextInt(100);
-            ui.mainTextArea.setText("You attacked Totodile with " + "kick balls" + " gave " + playerDamage + " damage");
+            playerDamage = new Random().nextInt(20);
+            ui.mainTextArea.setText("You attacked Totodile with " + "kick balls" + " gave " + playerDamage + " damage\n" +
+                    "told you, his weak");
         }
 
         ui.mainTextArea.setLineWrap(true);
@@ -878,6 +1017,7 @@ public class Story {
             game.position1 = "TotodileejayAttackLeft";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion5";
         } else if (pokemon.Hp < 0) {
             game.position1 = "win";
             game.position3 = "";
@@ -889,7 +1029,7 @@ public class Story {
     public void totodileEjayAttackLeft() {
 
 
-        monsterDamage = new Random().nextInt(100);
+        monsterDamage = new Random().nextInt(80);
 
         ui.mainTextArea.setText("Totodile Attack you and gave you " + monsterDamage + " damage");
 
@@ -905,6 +1045,7 @@ public class Story {
             game.position1 = "leftEjayFight";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion5";
         } else if (player.Hp < 0) {
             game.position1 = "lose";
             game.position3 = "";
@@ -933,10 +1074,12 @@ public class Story {
         ui.choice1.setText("Slap");
         ui.choice2.setText("Insult");
         ui.choice3.setText(("Kick Balls"));
+        ui.choice4.setText("Potion");
 
         game.position1 = "slapRight";
         game.position3 = "insultRight";
         game.position4 = "kickBallsRight";
+        game.position5 = "potion6";
 
     }
     public void ejayAttackRight() throws UnsupportedAudioFileException, LineUnavailableException, IOException { //pikachu
@@ -946,18 +1089,20 @@ public class Story {
         if (game.position4.equals("slapRight")) {
             sound.slapSound();
             sound.playSlap();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(10);
             ui.mainTextArea.setText("You attacked Mewtwo with " + "slap" + " gave " + playerDamage + " damage");
         } else if (game.position4.equals("insultRight")) {
             sound.insultSound();
             sound.playInsult();
-            playerDamage = new Random().nextInt(100);
-            ui.mainTextArea.setText("You attacked Mewtwo with " + "insult" + " gave " + playerDamage + " damage");
+            playerDamage = new Random().nextInt(20);
+            ui.mainTextArea.setText("You attacked Mewtwo with " + "insult" + " gave " + playerDamage + " damage\n" +
+                    "told you, his weak");
         } else if (game.position4.equals("kickBallsRight")) {
             sound.kickBallsSound();
             sound.playKickballs();
-            playerDamage = new Random().nextInt(100);
-            ui.mainTextArea.setText("You attacked Mewtwo with " + "kickballs" + " gave " + playerDamage + " damage");
+            playerDamage = new Random().nextInt(20);
+            ui.mainTextArea.setText("You attacked Mewtwo with " + "kickballs" + " gave " + playerDamage + " damage\n" +
+                    "told you, his weak");
         }
 
         ui.mainTextArea.setLineWrap(true);
@@ -973,6 +1118,7 @@ public class Story {
             game.position1 = "mewtwoEjayAttackRight";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion6";
         } else if (pokemon.Hp < 0) {
             game.position1 = "win";
             game.position3 = "";
@@ -984,7 +1130,7 @@ public class Story {
     public void mewtwoEjayAttackRight() {
 
 
-        monsterDamage = new Random().nextInt(100);
+        monsterDamage = new Random().nextInt(80);
 
         ui.mainTextArea.setText("Mewtwo Attack you and gave you " + monsterDamage + " damage");
 
@@ -1000,6 +1146,7 @@ public class Story {
             game.position1 = "rightEjayFight";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion6";
         } else if (player.Hp < 0) {
             game.position1 = "lose";
             game.position3 = "";
@@ -1013,10 +1160,10 @@ public class Story {
     public void setDirectionMew() {
 
 
-    ui.mainTextArea.setText("Choose a Direction");
-    ui.choice1.setText("Forward");
-    ui.choice2.setText("Left");
-    ui.choice3.setText("Right");
+    ui.mainTextArea.setText("Where would you like to go:");
+    ui.choice1.setText("LittleRoot");
+    ui.choice2.setText("Petalburg");
+    ui.choice3.setText("Rustboro");
 
 //        game.position = "Direction"; //access the variable spring
 
@@ -1027,7 +1174,7 @@ public class Story {
 
 }
     public void forwardMew() {
-        sound.stopPikachu();
+
 
         ui.mainTextArea.setText("A Wild Gyrados Appeared\n" +
                 "What will you do...");
@@ -1047,10 +1194,12 @@ public class Story {
         ui.choice1.setText("psychic");
         ui.choice2.setText("supernova");
         ui.choice3.setText(("hyperbeam"));
+        ui.choice4.setText("Potion");
 
         game.position1 = "psychicForward";
         game.position3 = "supernovaForward";
         game.position4 = "hyperbeamForward";
+        game.position5 = "potion7";
 
     }
     public void mewAttackForward() throws UnsupportedAudioFileException, LineUnavailableException, IOException { //pikachu
@@ -1059,17 +1208,17 @@ public class Story {
         if (game.position4.equals("psychicForward")) {
             sound.psychic();
             sound.playPsychic();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(20);
             ui.mainTextArea.setText("You attacked Mewtwo with " + "psychic" + " gave " + playerDamage + " damage");
         } else if (game.position4.equals("supernovaForward")) {
             sound.supernova();
             sound.playSupernova();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(20);
             ui.mainTextArea.setText("You attacked Mewtwo with " + "supernova" + " gave " + playerDamage + " damage");
         } else if (game.position4.equals("hyperbeamForward")) {
             sound.hyperbeam();
             sound.playHyperbeam();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(10);
             ui.mainTextArea.setText("You attacked Mewtwo with " + "kick balls" + " gave " + playerDamage + " damage");
         }
 
@@ -1087,6 +1236,7 @@ public class Story {
             game.position1 = "gyradosMewAttackForward";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion7";
         } else if (pokemon.Hp < 0) {
             game.position1 = "win";
             game.position3 = "";
@@ -1098,7 +1248,7 @@ public class Story {
     public void gyradosMewAttackForward() {
 
 
-        monsterDamage = new Random().nextInt(100);
+        monsterDamage = new Random().nextInt(25);
 
         ui.mainTextArea.setText("Gyrados Attack you and gave you " + monsterDamage + " damage");
 
@@ -1114,6 +1264,7 @@ public class Story {
             game.position1 = "forwardMewFight";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion7";
         } else if (player.Hp < 0) {
             game.position1 = "lose";
             game.position3 = "";
@@ -1142,10 +1293,12 @@ public class Story {
         ui.choice1.setText("psychic");
         ui.choice2.setText("supernova");
         ui.choice3.setText(("hyperbeam"));
+        ui.choice4.setText("Potion");
 
         game.position1 = "psychicLeft";
         game.position3 = "supernovaLeft";
         game.position4 = "hyperbeamLeft";
+        game.position5 = "potion8";
 
     }
     public void mewtotoAttackLeft() throws UnsupportedAudioFileException, LineUnavailableException, IOException { //pikachu
@@ -1154,17 +1307,17 @@ public class Story {
         if (game.position4.equals("psychicLeft")) {
             sound.psychic();
             sound.playPsychic();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(20);
             ui.mainTextArea.setText("You attacked Totodile with " + "psychic" + " gave " + playerDamage + " damage");
         } else if (game.position4.equals("supernovaLeft")) {
             sound.supernova();
             sound.playSupernova();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(20);
             ui.mainTextArea.setText("You attacked Totodile with " + "supernova" + " gave " + playerDamage + " damage");
         } else if (game.position4.equals("hyperbeamLeft")) {
             sound.hyperbeam();
             sound.playHyperbeam();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(10);
             ui.mainTextArea.setText("You attacked Totodile with " + "kick balls" + " gave " + playerDamage + " damage");
         }
 
@@ -1182,6 +1335,7 @@ public class Story {
             game.position1 = "totoMewAttackLeft";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion8";
         } else if (pokemon.Hp < 0) {
             game.position1 = "win";
             game.position3 = "";
@@ -1193,7 +1347,7 @@ public class Story {
     public void totoMewAttackLeft() {
 
 
-        monsterDamage = new Random().nextInt(100);
+        monsterDamage = new Random().nextInt(30);
 
         ui.mainTextArea.setText("Totodile Attack you and gave you " + monsterDamage + " damage");
 
@@ -1209,6 +1363,7 @@ public class Story {
             game.position1 = "leftMewFight";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion8";
         } else if (player.Hp < 0) {
             game.position1 = "lose";
             game.position3 = "";
@@ -1237,10 +1392,12 @@ public class Story {
         ui.choice1.setText("psychic");
         ui.choice2.setText("supernova");
         ui.choice3.setText(("hyperbeam"));
+        ui.choice4.setText("Potion");
 
         game.position1 = "psychicRight";
         game.position3 = "supernovaRight";
         game.position4 = "hyperbeamRight";
+        game.position5 = "potion9";
 
     }
     public void mewMewtwoAttackRight() throws UnsupportedAudioFileException, LineUnavailableException, IOException { //pikachu
@@ -1249,17 +1406,17 @@ public class Story {
         if (game.position4.equals("psychicRight")) {
             sound.psychic();
             sound.playPsychic();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(20);
             ui.mainTextArea.setText("You attacked Mewtwo with " + "psychic" + " gave " + playerDamage + " damage");
         } else if (game.position4.equals("supernovaRight")) {
             sound.supernova();
             sound.playSupernova();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(20);
             ui.mainTextArea.setText("You attacked Mewtwo with " + "supernova" + " gave " + playerDamage + " damage");
         } else if (game.position4.equals("hyperbeamRight")) {
             sound.hyperbeam();
             sound.playHyperbeam();
-            playerDamage = new Random().nextInt(100);
+            playerDamage = new Random().nextInt(10);
             ui.mainTextArea.setText("You attacked Mewtwo with " + "kick balls" + " gave " + playerDamage + " damage");
         }
 
@@ -1277,6 +1434,7 @@ public class Story {
             game.position1 = "mewtwoMewAttackRight";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion9";
         } else if (pokemon.Hp < 0) {
             game.position1 = "win";
             game.position3 = "";
@@ -1288,7 +1446,7 @@ public class Story {
     public void mewtwoMewAttackRight() {
 
 
-        monsterDamage = new Random().nextInt(100);
+        monsterDamage = new Random().nextInt(25);
 
         ui.mainTextArea.setText("Mewtwo Attack you and gave you " + monsterDamage + " damage");
 
@@ -1304,6 +1462,7 @@ public class Story {
             game.position1 = "rightMewFight";
             game.position3 = "";
             game.position4 = "";
+            game.position5 = "potion9";
         } else if (player.Hp < 0) {
             game.position1 = "lose";
             game.position3 = "";
@@ -1326,9 +1485,10 @@ public class Story {
         ui.choiceButtonPanel.setVisible(false);
 
 
-        answer = JOptionPane.showConfirmDialog(null, "YOUUU WINN!!!!.", "TRY AGAIN???", JOptionPane.YES_NO_CANCEL_OPTION);
+        answer = JOptionPane.showConfirmDialog(null, "YOUUU WINN!!!!.\n PLEASE COLLECT YOUR REWARD" +
+                " UNDER YOUR BED\n" + "CLICK YES/NO ONCE COLLECTED!", "REWARDDDDD", JOptionPane.YES_NO_CANCEL_OPTION);
 
-        ui.mainTextArea.setText("You Win!!!!!!!!\n Congratulations!!!! \n The pokemon Drop a reward under your bed");
+        ui.mainTextArea.setText("CONGRATULATION!!!!!!!! ");
         ui.choice1.setText("");
         ui.choice2.setText("");
         ui.choice3.setText("");
@@ -1342,7 +1502,7 @@ public class Story {
         sound.loseSound();
         sound.playlose();
 
-        answer = JOptionPane.showConfirmDialog(null, "YOUUU Lost!!!!.", "TRY AGAIN???", JOptionPane.YES_NO_CANCEL_OPTION); //yes or no panel
+        answer = JOptionPane.showConfirmDialog(null, "YOUUU Lost!!!!\n" + "TRY AGAIN?", "TRY AGAIN???", JOptionPane.YES_NO_CANCEL_OPTION); //yes or no panel
 
         ui.mainTextArea.setText("You are Dead\n\n <Game Over!!!!!>");
 
@@ -1353,18 +1513,26 @@ public class Story {
 
 
     public void run() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
-        sound.stopMidPage();
+        sound.stopbat();
         setPokemon();
 
     }
 
     public void surrender() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+        sound.stopbat();
         sound.loseSound();
         sound.playlose();
         lose();
 
     }
-}
+    public void potion() {
+        player.Hp = player.Hp + 10;
 
+        ui.hpLabelNumber.setText("" + player.Hp);
+
+    }
+
+
+}
 
 

@@ -6,11 +6,11 @@ import java.awt.*;
 public class UI {
     JFrame window;
 
-    JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, backgroundPanel, homePanel; //is a container that can store a group of components
+    JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, backgroundPanel, homePanel, ChoiceButtonPanel2; //is a container that can store a group of components
     JLabel titleNameLabel, hpLabel, hpLabelNumber, enemyLabel, enemyHPLabel, background1, background2, background3;
     Font titleFont = new Font("Times New Roman", Font.ITALIC, 90);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
-    JButton startButton, choice1, choice2, choice3;
+    JButton startButton, choice1, choice2, choice3, choice4;
     JTextArea mainTextArea;
 
 
@@ -29,13 +29,16 @@ public void createUI(Main.ChoiceHandler cHandler) {
     backgroundPanel = new JPanel();
     backgroundPanel.setBounds(0, 0, 800, 600);
 
+    background2 = new JLabel(new ImageIcon("/Users/apple/Downloads/Potions.jpg"));
+
     //TitleName
     titleNamePanel = new JPanel();
-    titleNamePanel.setBounds(100, 100, 600, 100); // creates a space for the panel
+    titleNamePanel.setBounds(50, 100, 700, 100); // creates a space for the panel
     // x and y is the position
-    titleNamePanel.setBackground(Color.black);
-    titleNameLabel = new JLabel("ADVENTUREE");
-    titleNameLabel.setForeground(Color.white); //placing it in the TitlePanel
+    titleNamePanel.setBackground(Color.BLACK);
+
+    titleNameLabel = new JLabel("SANGY's WORLD");
+    titleNameLabel.setForeground(Color.WHITE); //placing it in the TitlePanel
     titleNameLabel.setFont(titleFont);
 
     startButtonPanel = new JPanel();
@@ -67,7 +70,8 @@ public void createUI(Main.ChoiceHandler cHandler) {
     mainTextPanel.setBounds(100, 100, 600, 150);
     mainTextPanel.setOpaque(true);
     mainTextPanel.setBackground(Color.white);
-    background2 = new JLabel(new ImageIcon("/Users/apple/Downloads/61D9Njm44AL._AC_SL1500_.jpg"));
+
+
 
 
     window.add(mainTextPanel);
@@ -87,6 +91,11 @@ public void createUI(Main.ChoiceHandler cHandler) {
     choiceButtonPanel.setBackground(Color.white);
     choiceButtonPanel.setLayout(new GridLayout(3, 1));//layouts to buttons
     window.add(choiceButtonPanel);
+
+    ChoiceButtonPanel2 = new JPanel();
+    ChoiceButtonPanel2.setBounds(20, 500, 150, 50);
+    choiceButtonPanel.setBackground(Color.white);
+    window.add(ChoiceButtonPanel2);
 
     choice1 = new JButton("Option 1");
     // choice1.setBorderPainted(false);
@@ -112,10 +121,18 @@ public void createUI(Main.ChoiceHandler cHandler) {
     choice3.addActionListener(cHandler);
     choice3.setActionCommand("c3");
 
+    choice4 = new JButton("Potion");
+    choice4.setBackground(Color.white);
+    choice4.setForeground(Color.black);
+    choice4.setFont(normalFont);
+    choice4.addActionListener(cHandler);
+    choice4.setActionCommand("c4");
+
 
     choiceButtonPanel.add(choice1);
     choiceButtonPanel.add(choice2);
     choiceButtonPanel.add(choice3);
+    ChoiceButtonPanel2.add(choice4);
 
 
     playerPanel = new JPanel();
@@ -123,6 +140,13 @@ public void createUI(Main.ChoiceHandler cHandler) {
     playerPanel.setBackground(Color.white);
     playerPanel.setLayout(new GridLayout(1, 4));
     window.add(playerPanel);
+
+//    homePanel = new JPanel();
+//    homePanel.setBounds(10, 500, 70, 70);
+//    homePanel.setBackground(Color.white);
+//    homePanel.add(background2);
+//    window.add(homePanel);
+
 
     hpLabel = new JLabel("HP:");
     hpLabel.setForeground(Color.black);
@@ -141,8 +165,20 @@ public void createUI(Main.ChoiceHandler cHandler) {
     enemyHPLabel.setFont(normalFont);
     playerPanel.add(enemyHPLabel);
     backgroundPanel.add(background1);//add the button to the panel. if you want it behind. it will need to be added after the button
+
+
+
+
+
+//    choiceButtonPanel = new JPanel();
+//    choiceButtonPanel.setBounds(250, 350, 300, 150);
+//    choiceButtonPanel.setBackground(Color.white);
+//    choiceButtonPanel.setLayout(new GridLayout(3, 1));//layouts to buttons
+//    window.add(choiceButtonPanel);
     window.add(backgroundPanel);
-    mainTextPanel.add(background2);
+
+
+
 
     window.setVisible(true);
 
