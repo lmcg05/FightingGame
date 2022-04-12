@@ -8,8 +8,8 @@ public class Sound {
 
     Main game;
     private Clip clip, clipPsychic, clipSupernova, clipSlap, clipInsult, clipKickballs;
-    private Clip clipmid,clipTackle,clipThunder,clipThunderbolt, clipWin, clipHyperbeam;
-    private Clip clipPika, clipEjay,clipGyrados, clipLose;
+    private Clip clipmid,clipTackle,clipThunder,clipThunderbolt, clipWin, clipHyperbeam, clipbat;
+    private Clip clipPika, clipEjay,clipGyrados, clipLose, cliptoto, clipmew, clipma, cliptt, clipgy, clipyes, cliprec;
 
 
     public Sound(Main g){
@@ -78,6 +78,7 @@ public class Sound {
 
         clipGyrados.open(audioStream);
         this.clipGyrados = clipGyrados;
+
 
     }
     public void playGyrados() {
@@ -278,6 +279,127 @@ public class Sound {
         clipKickballs.start();
 
     }
+    public void totodile() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File file = new File("/Users/apple/Downloads/034 - Kanto - Nidoking.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+        Clip cliptoto = AudioSystem.getClip();
+
+        cliptoto.open(audioStream);
+        this.cliptoto = cliptoto ;
+
+    }
+    public void playToto() {
+        cliptoto.start();
+
+    }
+    public void mewtwo() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File file = new File("/Users/apple/Downloads/150 - Kanto - Mewtwo.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+        Clip clipmew = AudioSystem.getClip();
+
+        clipmew.open(audioStream);
+        this.clipmew = clipmew ;
+
+    }
+    public void playmew() {
+        clipmew.start();
+
+    }
+    public void gyradosAttack() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File file = new File("/Users/apple/Downloads/Bubblebeam.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+        Clip clipgy = AudioSystem.getClip();
+
+        clipgy.open(audioStream);
+        this.clipgy = clipgy ;
+
+    }
+    public void playgy() {
+        clipgy.start();
+
+    }
+    public void totoAttack() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File file = new File("/Users/apple/Downloads/Blizzard.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+        Clip cliptt = AudioSystem.getClip();
+
+        cliptt.open(audioStream);
+        this.cliptt = cliptt ;
+
+    }
+    public void playtt() {
+        cliptt.start();
+
+    }
+    public void mewAttack() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File file = new File("/Users/apple/Downloads/MegaDrain.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+        Clip clipma = AudioSystem.getClip();
+
+        clipma.open(audioStream);
+        this.clipma = clipma ;
+
+    }
+    public void playma() {
+        clipma.start();
+
+    }
+    public void battle() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File file = new File("/Users/apple/Downloads/1-17 Battle! Trainer.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+        Clip clipbat = AudioSystem.getClip();
+
+        clipbat.open(audioStream);
+        this.clipbat = clipbat ;
+
+    }
+    public void playbat() {
+        clipbat.start();
+
+    }
+    public void stopbat() {
+        clipbat.stop();
+        clipbat.flush();
+        clipbat.close();
+    }
+
+    public void recovery() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File file = new File("/Users/apple/Downloads/1-14 Recovery.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+        Clip cliprec = AudioSystem.getClip();
+
+        cliprec.open(audioStream);
+        this.cliprec = cliprec ;
+
+    }
+    public void playrec() {
+        cliprec.start();
+
+    }
+    public void stoprec() {
+        cliprec.stop();
+        cliprec.flush();
+        cliprec.close();
+    }
+    public void yes() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        File file = new File("/Users/apple/Downloads/01 When You Wish Upon a Star.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+        Clip clipyes = AudioSystem.getClip();
+
+        clipyes.open(audioStream);
+        this.clipyes = clipyes ;
+
+    }
+    public void playYes() {
+        clipyes.start();
+
+    }
+    public void stopYes() {
+        clipyes.stop();
+        clipyes.flush();
+        clipyes.close();
+    }
+
 
 
 

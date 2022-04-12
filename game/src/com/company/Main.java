@@ -1,6 +1,7 @@
 package com.company;
 
 import javax.sound.sampled.*;
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -14,6 +15,7 @@ public class Main {
     Pokemon pokemon = new Pokemon();
 
 
+
     VisibilityManager vm = new VisibilityManager(ui);
     Sound sound1 = new Sound(this);
 
@@ -21,7 +23,9 @@ public class Main {
 
 
 
-    String position, position1, position3, position4, snd1, snd2, snd3;
+    String name;
+
+    String position, position1, position3, position4, position5;
     //instantiate
     //sending ui to Visibility manager construct so it can access the panels from UI class
 
@@ -38,8 +42,13 @@ public class Main {
         ui.createUI(cHandler);
         vm.showTitleScreen();// can access the screen
         story.defaultSetUp();
+
+
+        name = JOptionPane.showInputDialog(null,"Enter your name:", "Player 1", JOptionPane.PLAIN_MESSAGE);
+
         sound1.startPage();
         sound1.playStartPage();
+
 
 
 
@@ -59,8 +68,8 @@ public class Main {
                     sound1.buttonSound();
 
 
-
                     vm.showGameScreen();
+
 
                     try {
                         story.setPokemon();
@@ -105,6 +114,18 @@ public class Main {
                     //                      sound2.buttonSound();
                     try {
                         story.selectPosition(position4);
+                    } catch (UnsupportedAudioFileException e) {
+                        e.printStackTrace();
+                    } catch (LineUnavailableException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case "c4":
+
+                    try {
+                        story.selectPosition(position5);
                     } catch (UnsupportedAudioFileException e) {
                         e.printStackTrace();
                     } catch (LineUnavailableException e) {
